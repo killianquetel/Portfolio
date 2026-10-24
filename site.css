@@ -710,6 +710,8 @@ ul.items li span {
 }
 
 .hero-video {
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
