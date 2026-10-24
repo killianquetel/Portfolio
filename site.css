@@ -843,7 +843,19 @@ video {
 }
 
 .hero-grid .frame {
-  aspect-ratio: 1 / 0.92;
+  aspect-ratio: var(--ratio, 1 / 0.92);
+}
+
+.hero-grid figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.hero-grid figcaption b {
+  margin-right: 4px;
+  color: var(--ink);
 }
 
 .hero-pair {
