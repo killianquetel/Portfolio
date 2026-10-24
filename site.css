@@ -522,6 +522,35 @@ ul.bullets li::before {
   color: var(--muted);
 }
 
+.timeline:has(.logo) {
+  padding-left: 68px;
+}
+
+.timeline:has(.logo)::before {
+  left: 23px;
+  top: 24px;
+}
+
+.job:has(.logo)::before {
+  display: none;
+}
+
+.job .logo {
+  position: absolute;
+  left: -68px;
+  top: -6px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 0 0 4px var(--bg, #fff);
+}
+
+.job.current .logo {
+  border: 2px solid var(--accent);
+}
+
 .cv-project {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -1357,6 +1386,22 @@ a.zoom {
   .cv-project .row {
     flex-direction: column;
     gap: 0;
+  }
+
+  .timeline:has(.logo) {
+    padding-left: 50px;
+  }
+
+  .timeline:has(.logo)::before {
+    left: 17px;
+    top: 18px;
+  }
+
+  .job .logo {
+    left: -50px;
+    top: -2px;
+    width: 36px;
+    height: 36px;
   }
 
   .cv-project {
