@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="../site.css">
 </head>
-<body class="theme-night">
+<body class="theme-light">
   <header class="nav">
     <div class="wrap nav-in">
       <a class="brand" href="../index.html">Killian <b>QUETEL</b></a>
@@ -29,31 +29,102 @@
       <a class="back" href="../index.html#projects">← All projects</a>
       <div class="kicker">Personal project · Oct 2025 – present</div>
       <h1>Formula 1 2026 – a full car designed from scratch in CATIA</h1>
-      <p class="lead">A complete car within the 2026 FIA technical regulations. I deliberately avoided approximation-based workflows: <b>no B-Rep, no imported geometry</b>, only stable and robust GSD+ features organized with the modular design approach. Every circuit then gets its own aero package, validated in SIMULIA.</p>
+      <p class="lead">A complete car at scale 1:1 within the 2026 FIA technical regulations. I deliberately avoided approximation-based workflows: <b>no B-Rep, no imported geometry</b>, only stable and robust GSD+ features organized with the modular design approach. Every circuit then gets its own aero package, validated in SIMULIA.</p>
       
     </div>
-    <div class="wrap wide">
-    <div class="annotated"><img src="../img/f1_hero.jpg" alt="F1 2026 – Mexico GP livery, CATIA Live Rendering"><span class="pin" style="left:31%;top:78.7%">1</span><span class="pin" style="left:28%;top:50.7%">2</span><span class="pin" style="left:62.5%;top:22.8%">3</span><span class="pin" style="left:73.6%;top:32.9%">4</span><span class="pin" style="left:70%;top:59.7%">5</span><span class="pin" style="left:88.2%;top:30.3%">6</span></div>
-    <ul class="legend"><li><i>1</i><b>Front wing</b><span>Conditions the airflow for the floor, sidepods and rear wing.</span></li><li><i>2</i><b>Nose &amp; chassis</b><span>Modeled inside the 2026 FIA reference volumes.</span></li><li><i>3</i><b>Halo vane</b><span>Cleans the halo wake toward the airbox and rear wing.</span></li><li><i>4</i><b>Engine cover &amp; livery</b><span>Continuous GSD+ surfaces; Día de Muertos livery.</span></li><li><i>5</i><b>Floor edge</b><span>Slots and fins seal the floor against the tyre wake.</span></li><li><i>6</i><b>Rear wing</b><span>Active aero; monkey-seat winglets on the Monaco package.</span></li></ul></div>
+    <div class="wrap wide"><a class="zoom hero-img" href="../img/hero_side.jpg"><img src="../img/hero_side.jpg" alt="F1 2026 – side view, CATIA Live Rendering"></a></div>
     <div class="wrap">
       <div class="stats"><div><b>250+</b><span>hours of design</span></div><div><b>60,000+</b><span>robust features</span></div><div><b>100 %</b><span>GSD+ surfaces</span></div><div><b>0</b><span>B-Rep or imported geometry</span></div><div><b>SIMULIA</b><span>full-car CFD</span></div></div>
       
-      <div class="sections"><section><h2>Approach</h2><ul class="bullets"><li><b>Modular architecture:</b> each sub-system is a module with published inputs and outputs, so any part can evolve without breaking the car.</li><li><b>Precise surfacing only:</b> 60,000+ features following best practices, no approximated geometry: longer, but every surface stays editable.</li></ul></section><section><h2>Circuit packages</h2><ul class="bullets"><li><b>Monaco:</b> no active-aero zones there, so the rear-wing actuators go and their regulatory volume is filled with monkey-seat winglets, converged with SIMULIA flow simulations.</li><li><b>Mexico:</b> 2,240 m altitude, ~20 % thinner air: four aero upgrades and a dedicated Día de Muertos livery.</li></ul></section><section class="inline-fig">
-        <figure><a class="zoom frame" href="../img/f1_cfd.jpg" data-caption="Full-car CFD"><img src="../img/f1_cfd.jpg" alt="Full-car CFD" loading="lazy"></a>
-          <figcaption><b>Full-car CFD</b> Streamlines of the Mexico package in SIMULIA Physics Results Explorer.</figcaption></figure></section></div>
-      <section class="gallery-sec"><h2>Mexico GP package</h2><div class="gallery cols-3">
-        <figure><a class="zoom frame" href="../img/f1_halo_vane.jpg" data-caption="Halo vane"><img src="../img/f1_halo_vane.jpg" alt="Halo vane" loading="lazy"></a>
-          <figcaption><b>Halo vane</b> Steadier air to the airbox and rear wing.</figcaption></figure>
-        <figure><a class="zoom frame" href="../img/f1_floor_corner.jpg" data-caption="Floor corner"><img src="../img/f1_floor_corner.jpg" alt="Floor corner" loading="lazy"></a>
-          <figcaption><b>Floor corner</b> The underfloor keeps its load.</figcaption></figure>
-        <figure><a class="zoom frame" href="../img/f1_exhaust_flap.jpg" data-caption="Exhaust flap"><img src="../img/f1_exhaust_flap.jpg" alt="Exhaust flap" loading="lazy"></a>
-          <figcaption><b>Exhaust flap</b> Flow guided toward the diffuser.</figcaption></figure>
-        <figure><a class="zoom frame" href="../img/f1_brake_winglets.jpg" data-caption="Brake-duct winglets"><img src="../img/f1_brake_winglets.jpg" alt="Brake-duct winglets" loading="lazy"></a>
-          <figcaption><b>Brake-duct winglets</b> Downforce on the rear axle.</figcaption></figure>
-        <figure><a class="zoom frame" href="../img/f1_rear.jpg" data-caption="Rear end"><img src="../img/f1_rear.jpg" alt="Rear end" loading="lazy"></a>
-          <figcaption><b>Rear end</b> Rear wing, beam wing and diffuser, CATIA Live Rendering.</figcaption></figure>
-        <figure><a class="zoom frame" href="../img/f1_livery.jpg" data-caption="Livery"><img src="../img/f1_livery.jpg" alt="Livery" loading="lazy"></a>
-          <figcaption><b>Livery</b> Día de Muertos livery for the Mexico GP.</figcaption></figure></div></section>
+      
+      <div class="paper-intro">
+        <section class="method"><h2>Method</h2><ul class="bullets"><li><b>Regulation first:</b> the FIA 2026 reference volumes are modeled before any surface and act as the skeleton of the car.</li><li><b>Modular architecture:</b> each sub-system is a module with published inputs and outputs, so any part can evolve without breaking the car.</li><li><b>Precise surfacing only:</b> 60,000+ GSD+ features following best practices, no approximated geometry: longer to build, but every surface stays editable.</li><li><b>Simulation loop:</b> each package is checked in SIMULIA before it is frozen.</li></ul></section>
+        <nav class="toc"><h2>Contents</h2><ol><li><a href="#ch1"><span>1</span>Regulations and reference volumes</a></li><li><a href="#ch2"><span>2</span>Survival cell, nose and engine cover</a></li><li><a href="#ch3"><span>3</span>Front and rear ends</a></li><li><a href="#ch4"><span>4</span>Complete car and first validation</a></li><li><a href="#ch5"><span>5</span>Monaco: monkey seats instead of active aero</a></li><li><a href="#ch6"><span>6</span>Full-car virtual wind tunnel</a></li><li><a href="#ch7"><span>7</span>Mexico: four upgrades for thin air</a></li></ol></nav>
+      </div>
+      <div class="chapters">
+        <section class="chapter" id="ch1">
+          <div class="ch-head"><span class="ch-num">1</span><div><span class="ch-phase">Phase 1 · Oct 2025</span><h2>Regulations and reference volumes</h2></div></div>
+          <p class="ch-text">The project starts from the 2026 technical regulations, not from a sketch. The reference volumes (RV) that bound the bodywork, wheels and wings are modeled first, at scale 1:1. Every module then reads its limits from these volumes, so the car stays legal by construction.</p>
+          <div class="figs">
+            <figure><a class="zoom frame" href="../img/build_rv.jpg" data-caption="Fig. 1 – FIA 2026 reference volumes modeled as the skeleton of the project."><img src="../img/build_rv.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 1</b> FIA 2026 reference volumes modeled as the skeleton of the project.</figcaption></figure>
+          </div>
+        </section>
+        <section class="chapter" id="ch2">
+          <div class="ch-head"><span class="ch-num">2</span><div><span class="ch-phase">Phase 2</span><h2>Survival cell, nose and engine cover</h2></div></div>
+          <p class="ch-text">The main body is surfaced inside the volumes: nose, survival cell, sidepods and engine cover. Patches are split along clean boundaries and kept curvature-continuous, so the reflections stay smooth and the flow stays attached.</p>
+          <div class="figs">
+            <figure><a class="zoom frame" href="../img/build_body.jpg" data-caption="Fig. 2 – Nose, survival cell, sidepods and engine cover in GSD+ surfaces."><img src="../img/build_body.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 2</b> Nose, survival cell, sidepods and engine cover in GSD+ surfaces.</figcaption></figure>
+          </div>
+        </section>
+        <section class="chapter" id="ch3">
+          <div class="ch-head"><span class="ch-num">3</span><div><span class="ch-phase">Phase 3</span><h2>Front and rear ends</h2></div></div>
+          <p class="ch-text">Suspension, wheels and the multi-element front wing close the front of the car; the rear wing, beam wing and diffuser close the back. The rear wing carries the straight-line mode actuator required by the 2026 active-aero rules.</p>
+          <div class="figs">
+            <figure><a class="zoom frame" href="../img/build_front.jpg" data-caption="Fig. 3 – Front end: nose, front suspension and multi-element front wing."><img src="../img/build_front.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 3</b> Front end: nose, front suspension and multi-element front wing.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/build_rear.jpg" data-caption="Fig. 4 – Rear end: rear wing with its actuator fairing, beam wing and diffuser."><img src="../img/build_rear.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 4</b> Rear end: rear wing with its actuator fairing, beam wing and diffuser.</figcaption></figure>
+          </div>
+        </section>
+        <section class="chapter" id="ch4">
+          <div class="ch-head"><span class="ch-num">4</span><div><span class="ch-phase">Phase 4 · May 2026</span><h2>Complete car and first validation</h2></div></div>
+          <p class="ch-text">The assembled car is checked against its volumes, then rendered for the first time. A first virtual wind tunnel run on the neutral car confirms that the flow follows the bodywork before any circuit-specific work starts.</p>
+          <div class="figs">
+            <figure><a class="zoom frame" href="../img/neutral_volumes.jpg" data-caption="Fig. 5 – Complete car inside its reference volumes (transparent boxes)."><img src="../img/neutral_volumes.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 5</b> Complete car inside its reference volumes (transparent boxes).</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/black_livery.jpg" data-caption="Fig. 6 – First full rendering, deep black livery (CATIA Live Rendering)."><img src="../img/black_livery.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 6</b> First full rendering, deep black livery (CATIA Live Rendering).</figcaption></figure>
+            <figure class="wide"><a class="zoom frame" href="../img/build_cfd.jpg" data-caption="Fig. 7 – First streamlines on the neutral car, SIMULIA Physics Results Explorer."><img src="../img/build_cfd.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 7</b> First streamlines on the neutral car, SIMULIA Physics Results Explorer.</figcaption></figure>
+          </div>
+        </section>
+        <section class="chapter" id="ch5">
+          <div class="ch-head"><span class="ch-num">5</span><div><span class="ch-phase">Package 1 · June 2026</span><h2>Monaco: monkey seats instead of active aero</h2></div></div>
+          <p class="ch-text">Monaco has no active-aero zone, so the straight-line mode actuator is useless there. I removed it and used its regulatory volume (the rear-wing actuator fairing box) to fit monkey-seat winglets. SIMULIA shows high pressure on their upper surface and a suction zone below: the flow is pushed upward, so the car is pushed down (Newton's third law). The geometry was converged over several flow simulations.</p>
+          <div class="figs">
+            <figure class="wide"><a class="zoom frame" href="../img/monaco_side.jpg" data-caption="Fig. 8 – Monaco-spec car, red livery."><img src="../img/monaco_side.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 8</b> Monaco-spec car, red livery.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/monaco_seats.jpg" data-caption="Fig. 9 – Reference volume box of the actuator fairing, filled by monkey seats in Monaco instead of the straight-line mode actuator used at other races."><img src="../img/monaco_seats.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 9</b> Reference volume box of the actuator fairing, filled by monkey seats in Monaco instead of the straight-line mode actuator used at other races.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/monaco_flow.jpg" data-caption="Fig. 10 – Monkey-seat simulations: surface pressure, pressure slice and streamlines."><img src="../img/monaco_flow.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 10</b> Monkey-seat simulations: surface pressure, pressure slice and streamlines.</figcaption></figure>
+            <figure class="wide"><a class="zoom frame" href="../img/monaco_street.jpg" data-caption="Fig. 11 – The Monaco package on track, CATIA Live Rendering."><img src="../img/monaco_street.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 11</b> The Monaco package on track, CATIA Live Rendering.</figcaption></figure>
+          </div>
+        </section>
+        <section class="chapter" id="ch6">
+          <div class="ch-head"><span class="ch-num">6</span><div><span class="ch-phase">Sept 2026</span><h2>Full-car virtual wind tunnel</h2></div></div>
+          <p class="ch-text">The complete Monaco-spec car goes through a full-car CFD campaign in the virtual wind tunnel. Streamlines around the front tyre, sidepod and floor edge show where the tyre wake interacts with the floor, and drive the next upgrades.</p>
+          <div class="figs">
+            <figure class="wide"><a class="zoom frame" href="../img/tunnel_flow.jpg" data-caption="Fig. 12 – Streamlines around the front tyre, sidepod and floor edge in the SIMULIA virtual wind tunnel."><img src="../img/tunnel_flow.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 12</b> Streamlines around the front tyre, sidepod and floor edge in the SIMULIA virtual wind tunnel.</figcaption></figure>
+          </div>
+        </section>
+        <section class="chapter" id="ch7">
+          <div class="ch-head"><span class="ch-num">7</span><div><span class="ch-phase">Package 2 · Oct 2026</span><h2>Mexico: four upgrades for thin air</h2></div></div>
+          <p class="ch-text">Mexico City sits at 2,240 m: the air is about 20 % thinner, so every wing produces less downforce and the cooling is weaker. Four upgrades target the airflow over the whole car, each checked with full-car CFD, and the car gets a Día de Muertos livery.</p>
+          <div class="figs">
+            <figure class="wide"><a class="zoom frame" href="../img/f1_hero.jpg" data-caption="Fig. 13 – Mexico-spec car with its Día de Muertos livery."><img src="../img/f1_hero.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 13</b> Mexico-spec car with its Día de Muertos livery.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/f1_halo_vane.jpg" data-caption="Fig. 14 – Halo vane: cleans the halo wake toward the airbox and rear wing."><img src="../img/f1_halo_vane.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 14</b> Halo vane: cleans the halo wake toward the airbox and rear wing.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/f1_floor_corner.jpg" data-caption="Fig. 15 – Floor corner: slots and fins seal the floor against the tyre wake."><img src="../img/f1_floor_corner.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 15</b> Floor corner: slots and fins seal the floor against the tyre wake.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/f1_exhaust_flap.jpg" data-caption="Fig. 16 – Exhaust flap: guides the flow toward the diffuser."><img src="../img/f1_exhaust_flap.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 16</b> Exhaust flap: guides the flow toward the diffuser.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/f1_brake_winglets.jpg" data-caption="Fig. 17 – Rear brake-duct winglets: extra downforce on the rear axle."><img src="../img/f1_brake_winglets.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 17</b> Rear brake-duct winglets: extra downforce on the rear axle.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/f1_cfd.jpg" data-caption="Fig. 18 – Full-car CFD of the Mexico package in SIMULIA."><img src="../img/f1_cfd.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 18</b> Full-car CFD of the Mexico package in SIMULIA.</figcaption></figure>
+            <figure><a class="zoom frame" href="../img/f1_rear.jpg" data-caption="Fig. 19 – Rear end of the Mexico package, CATIA Live Rendering."><img src="../img/f1_rear.jpg" alt="" loading="lazy"></a>
+              <figcaption><b>Fig. 19</b> Rear end of the Mexico package, CATIA Live Rendering.</figcaption></figure>
+          </div>
+        </section>
+      </div>
+      
+      
       <p class="note">Shared on LinkedIn as the series “Engineering behind F1”.</p>
       <nav class="pager">
         <a href="generative-hood.html"><span>← Previous</span>Generative hood</a>
