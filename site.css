@@ -522,6 +522,67 @@ ul.bullets li::before {
   color: var(--muted);
 }
 
+.cv-project {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  color: var(--on-night);
+  background: linear-gradient(135deg, var(--night) 0%, var(--night-deep) 100%);
+  border-left: 5px solid var(--accent);
+  border-radius: 10px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.cv-project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(12, 56, 70, 0.2);
+}
+
+.cv-project img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.cv-project .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.cv-project h3 {
+  font-size: 22px;
+  color: #fff;
+}
+
+.cv-project .date {
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.cv-project p {
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.cv-project b {
+  color: #fff;
+}
+
+.cv-project .mini {
+  display: flex;
+  gap: 24px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.cv-project .mini b {
+  font-family: var(--head-font);
+  font-size: 22px;
+}
+
 .skill-group + .skill-group {
   margin-top: 16px;
 }
@@ -1046,9 +1107,15 @@ a.zoom {
     font-size: 12px;
   }
 
-  .job .row {
+  .job .row,
+  .cv-project .row {
     flex-direction: column;
     gap: 0;
+  }
+
+  .cv-project {
+    grid-template-columns: 1fr;
+    padding: 18px;
   }
 
   .sections,
